@@ -1,0 +1,29 @@
+# pack-refs with: peeled fully-peeled 
+5d2183ca7b2d44776ec053915fcf5716c57f9d7c refs/remotes/origin/cburlinchon-intellij-test-run-configs
+f4d344d98691ef3f0707c93f8ea51c67fc8eba65 refs/remotes/origin/clint-pluginsfix
+66497ef2d1b467e0edec9fb9fcc1b98defa1d7f1 refs/remotes/origin/colljos-corda-660
+58cedc25b29cab9edc0f90731aed1667a7d3be53 refs/remotes/origin/colljos-cordapluginregistry
+ab27b95458f569d4843abb57f69177c5bc1a0dc7 refs/remotes/origin/colljos-upgrade-1-0-0-RC3
+55d10c552ac22b7524bbb09ed7a0e6de351788ec refs/remotes/origin/colljos-upgrade-1-0-0-RC4
+b9e2076fbf275fa6dc5b5b0c699a31cb236322f0 refs/remotes/origin/joel-net-name
+2b93d29b3e1be3f5dac52d05cb827ebcb47ce708 refs/remotes/origin/joel-readme-typo
+0dfd1efb929388920167474a748d3eb4fe59e454 refs/remotes/origin/m4ksio_1.0_compilation_fix
+9762e4c475a70177d2d29f17023deeba45598269 refs/remotes/origin/m4ksio_gradle_warning_fix
+09449529579697337d3734c9c91ef600cc8d50a0 refs/remotes/origin/m4ksio_remove_obsolete_imports
+622e7abd710a6e6cf89cc260eaefb5e855bea678 refs/remotes/origin/master
+6b8f549fb606098039fda322cdcc98a3fad23527 refs/remotes/origin/pre-release-M15
+8efc9f75d4a7087c65ad422aff81116cbd7e1936 refs/remotes/origin/pre-release-M16-2
+b03a273031d51347e62d17f3311ca35e1e6ec7be refs/remotes/origin/release-M14
+69e437c8f8c0ba66a6ebfe8fe9c4189af23bf4d2 refs/remotes/origin/release-V1
+99f5e9fc7fcc92decaf60ae94a384cbcfbf1cf71 refs/remotes/origin/release/kat/updateVNumber
+968cb1c026377c43eec1704b955e98c76c18c01f refs/remotes/origin/rnicoll-m16-api
+d8f507f0c5aabad49b4dff87019b7e35e38dd4a8 refs/remotes/origin/upgrade-rel-label-1.1-SNAPSHOT
+f0a2b15e7f4c81b042e854774899da7d8eb758a0 refs/tags/M16-RC02
+^c4683932b179de8f1f960c988ef550fab59eef33
+ffd83881aae2e22ad31d081306a3fbbdbdd85114 refs/tags/M16-RC03
+^33f5d8770359158339076133f501ae13c2086c14
+aafc5e869093ef2cd8359a1fd5e5ccf764fef261 refs/tags/M16-RC04
+^6f182041786240304006e37cb610e9a7435db16d
+b03a273031d51347e62d17f3311ca35e1e6ec7be refs/tags/release-M14.0
+7c602e40b93379b950441f0595f30698786be8b7 refs/tags/release-V1.0
+^69e437c8f8c0ba66a6ebfe8fe9c4189af23bf4d2

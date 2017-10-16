@@ -1,0 +1,16 @@
+Based on HelloWorld: https://docs.corda.net/hello-world-running.html
+
+cd C:\Github-MyWork\Cordapp-AzSingleLedger-kotlin
+gradlew build
+gradlew deploy
+cd C:\Github-MyWork\Cordapp-AzSingleLedger-kotlin\build\nodes
+runnodes.bat   [or gointo individual node folder >java -jar corda.ja and also run the jave -jar xxx-webserver.jar]
+
+Scenario   create an IOU of 100 with HSBC->DBS
+on HSBC corda console: >start IOUFlow iouValue: 99, otherParty: "O=DBS,L=Singapore,C=SG"
+then 		       >run vaultQuery contractStateType: com.template.IOUState
+
+
+Not yet start wiht updating the conttract flow and creating api to consume https://docs.corda.net/tut-two-party-index.html
+
+copy nodes to Azure's corda74ji individually and make sure the script are 0777, any new node add need to update build.gradle file and run deploy
