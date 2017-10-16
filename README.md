@@ -42,13 +42,14 @@ run the nodes with:
 
     runnodes.bat --log-to-console --logging-level=DEBUG
 
-You should now have three Corda nodes running on your machine serving 
-the template.
+OR haead into individua and run the jar e.g. java -jar corda.jar, xxx-webserver.jar
 
-When the nodes have booted up, you should see a message like the following 
-in the console: 
+Note: NotaryNode is corda74ji-not0.eastasia.cloudapp.azure.com and also use for the NetwrokMAp and I don't run the NetworkMapNode created from the Azure template
 
-     Node started up and registered in 5.007 sec
+## Run the test
+create an IOU of 100 with HSBC->DBS
+on HSBC corda console: >start IOUFlow iouValue: 99, otherParty: "O=DBS,L=Singapore,C=SG"
+then 		       >run vaultQuery contractStateType: com.template.IOUState
 
 ## Interacting with the CorDapp via HTTP
 
@@ -60,8 +61,8 @@ The nodes can be found using the following port numbers, defined in
 under `build/nodes/partyX`:
 
      HSBC-node: corda74ji-node0.eastasia.cloudapp.azure.com:10007
-     BankOfChin-node: corda74ji-node0.eastasia.cloudapp.azure.com:10010
-	 DBS-node: corda74ji-node0.eastasia.cloudapp.azure.com:10013
+     BankOfChin-node: corda74ji-node1.eastasia.cloudapp.azure.com:10010
+	 DBS-node: corda74ji-node2.eastasia.cloudapp.azure.com:10013
 
 As the nodes start up, they should tell you which host and port their
 embedded web server is running on. The API endpoints served are:
