@@ -1,7 +1,8 @@
 ![Corda](https://www.corda.net/wp-content/uploads/2016/11/fg005_corda_b.png)
 
 # This sample is based on CorDapp Kotlin Template release-V1.0 and running on Azure
-
+- include 2 party Sign Txn
+- IOUFlow with Web API 
 
 ## Getting Set Up
 
@@ -46,12 +47,12 @@ OR haead into individua and run the jar e.g. java -jar corda.jar, xxx-webserver.
 
 Note: NotaryNode is corda74ji-not0.eastasia.cloudapp.azure.com and also use for the NetwrokMAp and I don't run the NetworkMapNode created from the Azure template
 
-## Run the test
+## Run the test [Using the command line]
 create an IOU of 100 with HSBC->DBS
 on HSBC corda console: >start IOUFlow iouValue: 99, otherParty: "O=DBS,L=Singapore,C=SG"
 then 		       >run vaultQuery contractStateType: com.template.IOUState
 
-## Interacting with the CorDapp via HTTP
+## Interacting with the CorDapp via HTTP [Select the "static template"!! to run the IOU 2 parties sign demo]
 
 The CorDapp defines a couple of HTTP API end-points and also serves some
 static web content. Initially, these return generic template responses.
@@ -60,18 +61,10 @@ The nodes can be found using the following port numbers, defined in
 `build.gradle`, as well as the `node.conf` file for each node found
 under `build/nodes/partyX`:
 
-     HSBC-node: corda74ji-node0.eastasia.cloudapp.azure.com:10007
-     BankOfChin-node: corda74ji-node1.eastasia.cloudapp.azure.com:10010
-	 DBS-node: corda74ji-node2.eastasia.cloudapp.azure.com:10013
+     HSBC-node: 		http://corda74ji-node0.eastasia.cloudapp.azure.com:10007
+     BankOfChin-node: 	http://corda74ji-node1.eastasia.cloudapp.azure.com:10010
+	 DBS-node: 			http://corda74ji-node2.eastasia.cloudapp.azure.com:10013
 
-As the nodes start up, they should tell you which host and port their
-embedded web server is running on. The API endpoints served are:
-
-     /api/template/templateGetEndpoint
-
-And the static web content is served from:
-
-     /web/template
 
 ## Using the Example RPC Client
 

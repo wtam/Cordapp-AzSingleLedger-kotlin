@@ -1,5 +1,6 @@
 package com.template.flow
 
+//import com.template.IOUFlowResponder
 import com.template.Responder
 import net.corda.node.internal.StartedNode
 import net.corda.testing.node.MockNetwork
@@ -21,6 +22,8 @@ class FlowTests {
         b = nodes.partyNodes[1]
         nodes.partyNodes.forEach {
             it.registerInitiatedFlow(Responder::class.java)
+            //updating to use IOUResponsder, Borrower to also sign the Tx
+            //it.registerInitiatedFlow(IOUFlowResponder::class.java)
         }
         net.runNetwork()
     }
