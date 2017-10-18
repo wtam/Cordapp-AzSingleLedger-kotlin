@@ -24,12 +24,22 @@ To get started, clone this repository with:
 Note: You'll need to re-run this build step after making any changes to
 the template for these to take effect on the node.
 
-## Running the Nodes
+## Running the Nodes on Azure
+[The Notary Node]
+wtam@corda74ji-not0:/opt/corda/nodes> java -jar corda.jar --log-to-console |or ./start.sh  [The Notary NOde]
 
-Once the build finishes, change directories to the folder where the newly
-built nodes are located:
+wtam@corda74ji-not0:/opt/corda/nodes/HSBC> java -jar corda.jar --log-to-console
+wtam@corda74ji-not0:/opt/corda/nodes/HSBC> java -jar corda-webserver.jar
 
-     cd build/nodes [Notary, HSBC, BankOfChina, DBS]
+wtam@corda74ji-not0:/opt/corda/nodes/BankOfChina> java -jar corda.jar --log-to-console
+wtam@corda74ji-not0:/opt/corda/nodes/BankOfChina> java -jar corda-webserver.jar
+
+wtam@corda74ji-not0:/opt/corda/nodes/DBS> java -jar corda.jar --log-to-console
+wtam@corda74ji-not0:/opt/corda/nodes/DBS> java -jar corda-webserver.jar
+
+##Run on PC
+
+     cd build/nodes tehn runnodes.bat [Notary, HSBC, BankOfChina, DBS]
 
 The Gradle build script will have created a folder for each node. You'll
 see three folders, one for each node and a `runnodes` script. You can
@@ -49,8 +59,10 @@ Note: NotaryNode is corda74ji-not0.eastasia.cloudapp.azure.com and also use for 
 
 ## Run the test [Using the command line]
 create an IOU of 100 with HSBC->DBS
-on HSBC corda console: >start IOUFlow iouValue: 99, otherParty: "O=DBS,L=Singapore,C=SG"
-then 		       >run vaultQuery contractStateType: com.template.IOUState
+on HSBC corda console: 
+	>start IOUFlow iouValue: 99, otherParty: "O=DBS,L=Singapore,C=SG"
+then   
+	>run vaultQuery contractStateType: com.template.IOUState
 
 ## Interacting with the CorDapp via HTTP [Select the "static template"!! to run the IOU 2 parties sign demo]
 
@@ -63,7 +75,7 @@ under `build/nodes/partyX`:
 
      HSBC-node: 		http://corda74ji-node0.eastasia.cloudapp.azure.com:10007
      BankOfChin-node: 	http://corda74ji-node1.eastasia.cloudapp.azure.com:10010
-	 DBS-node: 			http://corda74ji-node2.eastasia.cloudapp.azure.com:10013
+	 DBS-node:			http://corda74ji-node2.eastasia.cloudapp.azure.com:10013
 
 
 ## Using the Example RPC Client
