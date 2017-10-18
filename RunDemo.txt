@@ -13,7 +13,9 @@ on HSBC corda console:
 then 		       
 	>run vaultQuery contractStateType: com.template.IOUState
 
-copy nodes to Azure's corda74ji individually and make sure the script are 0777, any new node add need to update build.gradle file and run deploy
+* copy nodes to Azure's corda74ji individually and make sure the script are 0777 a
+* and also modify the node.conf's NetworkMap address (default Controller/Notary to corda74ji-not0.eastasia.cloudapp.azure.com), 
+* any new node add need to update build.gradle file and run deploy
 
 OR 
 [Using the Web API]

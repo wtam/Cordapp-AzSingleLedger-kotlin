@@ -24,9 +24,11 @@ To get started, clone this repository with:
 Note: You'll need to re-run this build step after making any changes to
 the template for these to take effect on the node.
 
+## On Azure, make sure update individual node.conf's NetowrkMap to corda74ji-node0.eastasia.cloudapp.azure.com:10002  [Otherwise, Txn will stuck at the collecting Signature!!!
+
 ## Running the Nodes on Azure
 [The Notary Node]
-wtam@corda74ji-not0:/opt/corda/nodes> java -jar corda.jar --log-to-console |or ./start.sh  [The Notary NOde]
+wtam@corda74ji-not0:/opt/corda/nodes/Controller> java -jar corda.jar --log-to-console
 
 wtam@corda74ji-not0:/opt/corda/nodes/HSBC> java -jar corda.jar --log-to-console
 wtam@corda74ji-not0:/opt/corda/nodes/HSBC> java -jar corda-webserver.jar
@@ -55,7 +57,7 @@ run the nodes with:
 
 OR haead into individua and run the jar e.g. java -jar corda.jar, xxx-webserver.jar
 
-Note: NotaryNode is corda74ji-not0.eastasia.cloudapp.azure.com and also use for the NetwrokMAp and I don't run the NetworkMapNode created from the Azure template
+Note: NotaryNode is corda74ji-not0.eastasia.cloudapp.azure.com and also use for the NetwrokMap and I don't run the NetworkMapNode created from the Azure template
 
 ## Run the test [Using the command line]
 create an IOU of 100 with HSBC->DBS
